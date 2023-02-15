@@ -1,0 +1,15 @@
+<div class="sidenav">
+  <div class="input-field">
+    <input type="text" [(ngModel)]="value" class="modules" placeholder="ID">
+    <button class="submit" (click)="navigate()">Search</button>
+  </div>
+  <a [routerLink]="['/posts']" (click)="updateCurrentVal('posts')">Posts</a>
+  <a [routerLink]="['/comments']" (click)="updateCurrentVal('comments')">Comments</a>
+  <a [routerLink]="['/albums']" (click)="updateCurrentVal('albums')">Albums</a>
+  <a [routerLink]="['/photos']" (click)="updateCurrentVal('photos')">Photos</a>
+  <a [routerLink]="['/todos']" (click)="updateCurrentVal('todos')">Todos</a>
+</div>
+
+<div class="main">
+  <router-outlet></router-outlet>
+</div>  

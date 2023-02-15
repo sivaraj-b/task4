@@ -1,0 +1,42 @@
+<header class="text-center">
+  <div class="container">
+    <h1 class="font-weight-light">Todos</h1>
+  </div>
+  <section class="team pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 text-center" *ngFor="let todo of todos">
+          <div class="box">
+            <div class="avtar">
+              <img src="../../assets/img_avatar.png" alt="" class="img-fluid">
+            </div>
+            <div class="box_content">
+              <h3 class="title">Post ID: {{ todo.userId }} | ID: {{ todo.id }}</h3>
+              <span class="post">Title: {{ todo.title }}</span>
+            </div>
+            <div class="content">
+              Status : {{ todo.completed }}
+            </div>
+            <ul class="icons">
+              <li>
+                <a href="http://localhost:4200/">
+                  <mat-icon style="color: black;" aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+                </a>
+              </li>
+              <li>
+                <a href="http://localhost:4200/">
+                  <mat-icon style="color: black;">people</mat-icon>
+                </a>
+              </li>
+              <li>
+                <a href="http://localhost:4200/">
+                  <mat-icon style="color: black;">android</mat-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
